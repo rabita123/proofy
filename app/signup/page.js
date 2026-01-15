@@ -13,7 +13,7 @@ export default function Signup() {
 
   const signup = async () => {
     if (password !== confirmPassword) {
-      alert('Passwords do not match!')
+      alert('Passwords do not match! Please try again.')
       return
     }
 

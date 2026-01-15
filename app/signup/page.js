@@ -32,7 +32,7 @@ export default function Signup() {
     if (error) {
       alert(error.message)
     } else {
-      alert('Account created successfully! Please check your email to verify your account.')
+      alert('Sign up successful! Redirecting to login...')
       router.push('/login')
     }
   }

@@ -122,8 +122,8 @@ const handleUpgrade = () => {
   alert(
     "Premium is available!\n\n" +
     "Please message us to upgrade:\n" +
-    "WhatsApp: +880XXXXXXXXXX\n" +
-    "or Email: support@yourapp.com\n\n" +
+    "WhatsApp: +8801711966276\n" +
+    // "or Email: support@yourapp.com\n\n" +
     "We will activate Premium for you within 24 hours."
   )
 }

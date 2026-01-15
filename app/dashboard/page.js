@@ -139,7 +139,7 @@ const handleUpgrade = () => {
       <div style={styles.header}>
         <div>
           <h1 style={styles.title}>Dashboard</h1>
-          <p style={styles.subtitle}>Manage your projects and proof entries</p>
+          <p style={styles.subtitle}>Save proof of your work so you never lose client history.</p>
         </div>
         <div style={styles.headerActions}>
           {isPremium && <div style={styles.premiumBadge}>✨ Premium</div>}

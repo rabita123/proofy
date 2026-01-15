@@ -143,8 +143,13 @@ const handleUpgrade = () => {
         </div>
         <div style={styles.headerActions}>
           {isPremium && <div style={styles.premiumBadge}>✨ Premium</div>}
-          <button style={styles.logoutButton} onClick={handleLogout}>
-            <span style={styles.logoutIcon}>→</span>
+          <button 
+            style={styles.logoutButton} 
+            onClick={handleLogout}
+            onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
+            onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+          >
+            <span style={styles.logoutIcon}>🚪</span>
             <span>Logout</span>
           </button>
         </div>
@@ -294,7 +299,12 @@ const styles = {
   },
   header: {
     display: 'flex',
-    
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 30,
+    flexWrap: 'wrap',
+    gap: 15
+  },
   headerActions: {
     display: 'flex',
     alignItems: 'center',
@@ -302,30 +312,26 @@ const styles = {
     flexWrap: 'wrap'
   },
   logoutButton: {
-    background: '#fff',
-    color: '#374151',
+    background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
+    color: '#fff',
     border: 'none',
-    borderRadius: 10,
-    padding: '10px 20px',
+    borderRadius: 12,
+    padding: '12px 24px',
     cursor: 'pointer',
-    fontSize: 14,
+    fontSize: 15,
     fontWeight: 600,
-    transition: 'all 0.2s',
-    boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
+    transition: 'all 0.3s ease',
+    boxShadow: '0 4px 20px rgba(239, 68, 68, 0.3)',
     display: 'flex',
     alignItems: 'center',
-    
+    gap: 8
+  },
   logoutIcon: {
     fontSize: 18,
     fontWeight: 700,
-    transform: 'rotate(-90deg)',
-    display: 'inline-block'
-  },gap: 6
-  },justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 30,
-    flexWrap: 'wrap',
-    gap: 15
+    transform: 'rotate(180deg)',
+    display: 'inline-block',
+    transition: 'transform 0.3s ease'
   },
   title: {
     fontSize: 42,
